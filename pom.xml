@@ -8,18 +8,13 @@
     <artifactId>bytebuddy-test</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <maven.compiler.release>9</maven.compiler.release>
+        <maven.compiler.release>11</maven.compiler.release>
     </properties>
     <dependencies>
         <dependency>
             <groupId>net.bytebuddy</groupId>
             <artifactId>byte-buddy</artifactId>
             <version>1.10.1</version>
-        </dependency>
-        <dependency>
-            <groupId>net.bytebuddy</groupId>
-            <artifactId>byte-buddy-agent</artifactId>
-            <version>1.7.1</version>
         </dependency>
     </dependencies>
     <build>
@@ -29,7 +24,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <release>9</release>  <!--or <release>10</release>-->
+                    <release>11</release>  <!--or <release>10</release>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -46,7 +41,7 @@
                 <configuration>
                     <transformations>
                         <transformation>
-                            <plugin>com.fed03.bb.BbPlugin</plugin>
+                            <plugin>com.fed03.bytebuddyTransformer.TransformerPlugin</plugin>
                         </transformation>
                     </transformations>
                 </configuration>
